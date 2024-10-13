@@ -20,7 +20,7 @@ gantt
     title 專案甘特圖
 
     section 執行任務
-    參考資料與收集      :done,    t1, 2024-10-14, 7d
+    參考資料與收集      :done,    t1, 2024-10-3, 7d
     系統介面設計        :active,  t2, after t1, 21d
     軟體程式撰寫        :        t3, after t2, 30d
     系統測試           :        t4, after t3, 14d
