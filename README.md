@@ -12,7 +12,7 @@
 >本研究將透過設計思考流程，探索場域包括人員行為模式與背後意涵，並以混合實境作為切入工業4.0資訊傳遞過程的改善實作。了解人員對於混和實境的人機協作過程，以及人員對於系統前後的主觀感受與客觀績效等變化有所掌握情況。
 
 
-## 甘特圖
+## 甘特圖 hw2
 
 ```mermaid
 gantt
@@ -26,7 +26,7 @@ gantt
     計畫修改與完成      :        t5, after t4, 7d
 ```
 
-## 組員任務
+## 組員任務hw2
 | 組員   | 任務   |
 | ------- | ------- | 
 | 李昆達   | 程式撰寫   |
@@ -35,7 +35,7 @@ gantt
 | 徐毓廷   | 介面設計   | 
 | 田先勛   | 系統測試   | 
 
-### PERT/CPM 
+### PERT/CPM hw2
 ```mermaid
 graph TD;
     t1[參考資料與收集: 7d] --> t2[系統介面設計: 21d]
@@ -43,7 +43,7 @@ graph TD;
     t3 --> t4[系統測試: 14d]
     t4 --> t5[計畫修改與完成: 7d]
 ```
-## 功能性與非功能性需求
+## 功能性與非功能性需求 hw3
 >功能性需求：
  <br>1.用戶註冊：作業人員需要輸入帳號密碼方可登入頁面。
 <br>2.貨料資訊：頁面會依照作業人員行爲顯示該貨架或貨格的資訊
@@ -53,7 +53,7 @@ graph TD;
  <br>2.安全性：用戶資料應該以加密的方式儲存，確保安全
  <br>3.承載性：系統要確保流量的穩定，避免應系統線上同時太多人所造成的壅塞狀況
 
-## 功能分解圖
+## 功能分解圖FDD hw3
 倉儲管理系統
 ```mermaid
 graph TD
@@ -74,8 +74,37 @@ graph TD
     D --> D1[所需料件]
     D --> D2[組裝進度]
     D --> D3[示意圖片]
+```
 
+## 使用案例圖
+```mermaid
+%% 倉儲管理系統的使用案例圖
 
+actor "庫存管理員" as InventoryManager
+actor "訂單管理員" as OrderManager
+actor "物流人員" as LogisticsStaff
+actor "管理員" as Admin
 
+InventoryManager --> (產品入庫)
+InventoryManager --> (產品出庫)
+InventoryManager --> (庫存查詢)
+InventoryManager --> (庫存盤點)
 
+OrderManager --> (訂單生成)
+OrderManager --> (訂單分配)
+OrderManager --> (訂單追蹤)
+
+LogisticsStaff --> (發貨)
+LogisticsStaff --> (配送狀態查詢)
+LogisticsStaff --> (配送路徑優化)
+
+Admin --> (權限管理)
+Admin --> (用戶管理)
+
+(產品入庫) ..> (庫存管理系統) : include
+(產品出庫) ..> (庫存管理系統) : include
+(訂單生成) ..> (訂單管理系統) : include
+(發貨) ..> (物流系統) : include
+
+```
 
