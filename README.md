@@ -77,34 +77,5 @@ graph TD
 ```
 
 ## 使用案例圖
-```mermaid
-%% 倉儲管理系統的使用案例圖
 
-actor "庫存管理員" as InventoryManager
-actor "訂單管理員" as OrderManager
-actor "物流人員" as LogisticsStaff
-actor "管理員" as Admin
-
-InventoryManager --> (產品入庫)
-InventoryManager --> (產品出庫)
-InventoryManager --> (庫存查詢)
-InventoryManager --> (庫存盤點)
-
-OrderManager --> (訂單生成)
-OrderManager --> (訂單分配)
-OrderManager --> (訂單追蹤)
-
-LogisticsStaff --> (發貨)
-LogisticsStaff --> (配送狀態查詢)
-LogisticsStaff --> (配送路徑優化)
-
-Admin --> (權限管理)
-Admin --> (用戶管理)
-
-(產品入庫) ..> (庫存管理系統) : include
-(產品出庫) ..> (庫存管理系統) : include
-(訂單生成) ..> (訂單管理系統) : include
-(發貨) ..> (物流系統) : include
-
-```
 
