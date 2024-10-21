@@ -120,3 +120,8 @@ graph TD
 
 ### 例外情況：
 - 如果系統無法自動檢測放置位置，系統會提示作業人員進行人工檢查。
+### 系統環境圖 (System DFD)
+![image 2](https://github.com/user-attachments/assets/d135b957-af07-4f70-861b-2d810bbe7ed5)
+
+### 資料流向圖0 (DFD 0)
+![image](https://github.com/user-attachments/assets/04be83ee-307d-4d86-beb7-8cc8de39b147)
