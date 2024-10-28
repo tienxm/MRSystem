@@ -160,7 +160,7 @@ sequenceDiagram
 
     User->>System: 選擇操作（入料/撿料/組裝）
     System-->>User: 顯示相關貨料資訊
-         資訊存在
+    alt  資訊存在
         System-->>User: 顯示貨架/貨格資訊
     else 資訊不存在
         System-->>User: 顯示「無對應資料」提示
