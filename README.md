@@ -126,6 +126,8 @@ graph TD
 ### 資料流向圖0 (DFD 0)
 ![image](https://github.com/user-attachments/assets/04be83ee-307d-4d86-beb7-8cc8de39b147)
 
+使用案例 1：用戶註冊與登入
+### 循序圖
 ```mermaid
 sequenceDiagram
     participant User as 作業人員
@@ -138,4 +140,14 @@ sequenceDiagram
     else 失敗
         System-->>User: 顯示錯誤提示
     end
+```
+### 活動圖
+```mermaid
+flowchart TD
+    A[開始] --> B[輸入帳號和密碼]
+    B --> C{帳號和密碼是否正確？}
+    C -- 是 --> D[顯示首頁]
+    C -- 否 --> E[顯示錯誤提示]
+    E --> B
+    D --> F[結束]
 ```
