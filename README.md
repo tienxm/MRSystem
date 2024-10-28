@@ -160,7 +160,7 @@ sequenceDiagram
 
     User->>System: 選擇操作（入料/撿料/組裝）
     System-->>User: 顯示相關貨料資訊
-    alt 資訊存在
+         資訊存在
         System-->>User: 顯示貨架/貨格資訊
     else 資訊不存在
         System-->>User: 顯示「無對應資料」提示
@@ -174,6 +174,32 @@ flowchart TD
     C --> D{資料是否存在？}
     D -- 是 --> E[顯示貨架/貨格資訊]
     D -- 否 --> F[顯示「無對應資料」提示]
+    E --> G[結束]
+    F --> G
+```
+## 使用案例 3：操作警示
+### 循序圖
+```mermaid
+sequenceDiagram
+    participant User as 作業人員
+    participant System as 系統
+
+    User->>System: 放置料件至特定位置
+    System-->>System: 檢查放置位置
+    alt 正確位置
+        System-->>User: 無提示
+    else 錯誤位置
+        System-->>User: 顯示警告頁面
+    end
+```
+### 活動圖
+```mermaid
+flowchart TD
+    A[開始] --> B[放置料件至特定位置]
+    B --> C[檢查放置位置]
+    C --> D{位置是否正確？}
+    D -- 是 --> E[無提示]
+    D -- 否 --> F[顯示警告頁面]
     E --> G[結束]
     F --> G
 ```
