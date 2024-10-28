@@ -79,7 +79,7 @@ graph TD
 
 ![409EFE85-0F2F-434D-A89C-EC004912BEF4](https://github.com/user-attachments/assets/513e6d42-6f66-4cdc-900d-5bf1bd062769)
 
-# 使用案例 1：用戶註冊與登入1
+# 使用案例 1：用戶註冊與登入
 
 ### 說明：
 作業人員必須輸入帳號和密碼，才能登入系統進行操作。
@@ -125,6 +125,8 @@ graph TD
 
 ### 資料流向圖0 (DFD 0)
 ![image](https://github.com/user-attachments/assets/04be83ee-307d-4d86-beb7-8cc8de39b147)
+### 類別圖
+![messageImage_1730102957497](https://github.com/user-attachments/assets/49d0c75a-fd05-414a-9c74-5264a04b90b1)
 
 ## 使用案例 1：用戶註冊與登入
 ### 循序圖
