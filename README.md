@@ -126,7 +126,7 @@ graph TD
 ### 資料流向圖0 (DFD 0)
 ![image](https://github.com/user-attachments/assets/04be83ee-307d-4d86-beb7-8cc8de39b147)
 
-使用案例 1：用戶註冊與登入
+## 使用案例 1：用戶註冊與登入
 ### 循序圖
 ```mermaid
 sequenceDiagram
@@ -150,4 +150,30 @@ flowchart TD
     C -- 否 --> E[顯示錯誤提示]
     E --> B
     D --> F[結束]
+```
+## 使用案例 2：貨料資訊查詢
+### 循序圖
+```mermaid
+sequenceDiagram
+    participant User as 作業人員
+    participant System as 系統
+
+    User->>System: 選擇操作（入料/撿料/組裝）
+    System-->>User: 顯示相關貨料資訊
+    alt 資訊存在
+        System-->>User: 顯示貨架/貨格資訊
+    else 資訊不存在
+        System-->>User: 顯示「無對應資料」提示
+    end
+```
+### 活動圖
+```mermaid
+flowchart TD
+    A[開始] --> B[選擇操作（入料/撿料/組裝）]
+    B --> C[顯示貨料資訊]
+    C --> D{資料是否存在？}
+    D -- 是 --> E[顯示貨架/貨格資訊]
+    D -- 否 --> F[顯示「無對應資料」提示]
+    E --> G[結束]
+    F --> G
 ```
