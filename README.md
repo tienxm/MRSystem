@@ -125,3 +125,17 @@ graph TD
 
 ### 資料流向圖0 (DFD 0)
 ![image](https://github.com/user-attachments/assets/04be83ee-307d-4d86-beb7-8cc8de39b147)
+
+```mermaid
+sequenceDiagram
+    participant User as 作業人員
+    participant System as 系統
+
+    User->>System: 輸入帳號和密碼
+    System-->>User: 驗證帳號和密碼
+    alt 成功
+        System-->>User: 登入成功，顯示首頁
+    else 失敗
+        System-->>User: 顯示錯誤提示
+    end
+```
